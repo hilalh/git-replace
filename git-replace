@@ -7,7 +7,6 @@ export NEW_EMAIL="${3:-$DEFAULT_EMAIL}"
 if [ "help" = "${FIELD_NAME}" ]
 then
     echo "Usage: git-replace <old-field> <valid name> <valid email>"
-    # \( \("${FIELD_NAME}" = 'email' \)  -o  \( "${FIELD_NAME}" = 'name' \) \) -a 
 elif [  \( \( "$GIT_AUTHOR_EMAIL"="${OLD_FIELD}" \) -o \( "$GIT_AUTHOR_NAME"="${OLD_FIELD}" \) \) ];
 then
     echo "Modified Field:" $FIELD_NAME
